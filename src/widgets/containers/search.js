@@ -4,10 +4,12 @@ import { connect } from 'react-redux';
 // import { searchEntities } from '../../actions/index';
 import  * as actions from '../../actions/index';
 import { bindActionCreators } from 'redux';
+import { Prompt } from 'react-router';
 class SearchContainer extends Component {
   // Estado por defecto en el buscador
   state = {
-    value: ''
+    value: '',
+    prompt: false,
   }
   //  evitar que recargue la pagina
 
@@ -27,7 +29,9 @@ class SearchContainer extends Component {
     this.setState({
       // value: event.target.value.replace(' ', '-')
       // espacio al hacerla busqueda
-      value: event.target.value.replace(' ', ' ')
+      value: event.target.value.replace(' ', ' '),
+      // validar prompt que sea true o false con !!
+      prompt: !!(event.target.value.length),
     })
   }
   render() {
@@ -37,6 +41,8 @@ class SearchContainer extends Component {
         handleSubmit={this.handleSubmit}
         handleChange={this.handleInputChange}
         value={this.state.value}
+        // prompt={true}
+        prompt={this.state.prompt}
       />
     )
   }

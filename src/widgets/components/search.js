@@ -1,5 +1,7 @@
  import React from 'react';
 import './search.css';
+// importar Prompt avisar al usuario
+import { Prompt } from 'react-router';
 // function Search(props) {
 //   return (
 //     <form action=""></form>
@@ -10,6 +12,11 @@ import './search.css';
     className="Search"
     onSubmit={props.handleSubmit}
   >
+  <Prompt
+    // when={true o false}
+    when={props.prompt}
+    message="En realidad quieres salir de la página?"
+  />
     <input
     // referencia de react para almacenar el elemento del input
       ref={props.setRef}
