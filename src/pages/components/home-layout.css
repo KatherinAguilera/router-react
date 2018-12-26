@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+.HomeLayout {
+  display: grid;
+  grid-template: auto / .4fr 2fr;
+
+}
+@media screen and (max-width: 768px)
+{
+  .HomeLayout {
+  display: grid;
+  grid-template: auto / auto;
+  }
+}

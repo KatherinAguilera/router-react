@@ -1,0 +1,14 @@
+.Error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h3{
+  color: beige;
+  letter-spacing: 3px;
+  margin-top: 60px;
+}
+img{
+  max-width: 100%;
+}
