@@ -15,6 +15,7 @@ import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import { BrowserRouter, Route } from 'react-router-dom';
+import Home from './../pages/components/home';
 import Related from './../pages/components/related';
 import HomeLayout from './../pages/components/home-layout';
 
@@ -69,8 +70,10 @@ render(
     <Provider store={store}>
       <Fragment>
       {/* Definiendo rutas */}
-        <Route exact path="/" component={ HomePage } />
-        <Route exact path="/videos"><div>Videos</div></Route>
+        <Route exact path="/" component={ Home } />
+        <Route exact path="/videos" component={ HomePage } />
+
+        {/* <Route exact path="/videos"><div>Videos</div></Route> */}
         {/* <HomePage /> */}
       </Fragment>
     </Provider>

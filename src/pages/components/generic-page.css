@@ -1,0 +1,31 @@
+.Page {
+  color: rgb(58, 62, 121);
+  text-align: center;
+  display: grid;
+  grid-template: auto / .4fr 2fr;
+}
+.Page a {
+  color: lightblue;
+}
+
+.SadFace {
+  font-size: 50px;
+}
+
+.Page .Button {
+  background: white;
+  padding: 8px 15px;
+  border-radius: 10px;
+  border: none;
+  color: #171d30;
+  font-size: 16px;
+  margin: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px)
+{
+  .Page {
+  display: grid;
+  grid-template: auto / auto;
+  }
+}

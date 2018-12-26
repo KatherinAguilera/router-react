@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../../../images/logo.png';
 import './related.css';
 import { Link, NavLink } from 'react-router-dom';
-
 const home= "Inicio"
 const Related = props => (
   <nav className="Related">
