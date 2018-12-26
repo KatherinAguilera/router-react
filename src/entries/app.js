@@ -14,10 +14,10 @@ import { Map as map } from 'immutable';
 import logger from 'redux-logger';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
-import { BrowserRouter, Route } from 'react-router-dom';
+// componentes de router
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import Home from './../pages/components/home';
-import Related from './../pages/components/related';
-import HomeLayout from './../pages/components/home-layout';
+import NotFound from './../pages/components/not-found';
 
 // console.log(normalizedData);
 // console.log(data);
@@ -69,10 +69,14 @@ render(
   >
     <Provider store={store}>
       <Fragment>
+      {/* de router para que no muetre siempre el componente 404 en todos los componentes del menu */}
+      <Switch>
       {/* Definiendo rutas */}
         <Route exact path="/" component={ Home } />
         <Route exact path="/videos" component={ HomePage } />
-
+        <Redirect from="/v" to="/videos" />
+        <Route component={ NotFound } />
+      </Switch>
         {/* <Route exact path="/videos"><div>Videos</div></Route> */}
         {/* <HomePage /> */}
       </Fragment>
