@@ -3,6 +3,7 @@ import React, { PureComponent } from 'react';
 // importando archivo css
 import './media.css';
 import PropTypes from"prop-types";
+import { Link } from 'react-router-dom';
 // extender propiedades //Media es el nom del componente
 class Media extends PureComponent {
   state = {
@@ -21,7 +22,18 @@ class Media extends PureComponent {
       // UI syntaxis JSX
       // this porque hara algo de class Media .nombreFuncion
       // onclick enlazar evento clic del DOM
-      <div className="Media" onClick={this.handleClick}>
+      <Link
+        // Definir to como objeto para enviar varios parametros
+        to={{
+        pathname: '/videos',
+        search: `?id=${this.props.id}`,
+        state: {
+        modal: true,
+        id: this.props.id
+        }
+        }}
+      >
+        <div className="Media" onClick={this.handleClick}>
         <div className="Media-cover">
           <img className="Media-image"
             src={this.props.cover}
@@ -38,6 +50,7 @@ class Media extends PureComponent {
             <strong>Esto es: </strong>{this.props.type}
           </span>
         </div> 
+      </Link>
     )
   }
 }
