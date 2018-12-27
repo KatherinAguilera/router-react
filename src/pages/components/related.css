@@ -21,7 +21,6 @@ ul{
   margin-top: 190px;
   /* background: #F9BF15; */
   color:white;
-
   font-weight: bold;
   width: 100%;
   text-align: center;
@@ -39,11 +38,11 @@ li{
   box-shadow:5px 2px 5px rgba(0,0,0,.2);
   padding:40px 0 40px 0;
 }
-/* .Related a.is-selected {
-  box-shadow: inset 0 3px 0 0  #C1D354;
-}
+/* .Related .is-selected {
+  background:#C1D354;
+} */
 
-.Related a:hover {
+/*.Related a:hover {
   box-shadow: inset 0 3px 0 0 #161c30;
 } */
 @media screen and (max-width: 768px)

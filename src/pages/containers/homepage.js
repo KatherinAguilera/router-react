@@ -29,7 +29,15 @@ class HomePage extends Component {
   handleCloseModal = (event) => {
     this.props.actions.closeModal()
   }
-
+  // abrir el video aleatorio de router gorandom
+  componentDidMount() {
+    const search = this.props.location.search
+    if(search){
+        // const id = search.split('=')[1];
+        const id = search.substr(4)
+        this.handleOpenModal(id)
+    }
+  }
   render() {
     return (
       // lo que se coloque aca lo redendeara mi home-layout.js
