@@ -10,7 +10,6 @@
     "build:local": "webpack --env.NODE_ENV=local",
     "build:prod": "webpack -p --env.NODE_ENV=production",
     "build:server": "webpack --env.NODE_ENV=local --config ./webpack.server.config.js"
-
   },
   "author": "Katherine Aguilera",
   "license": "MIT",
@@ -32,6 +31,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
+    "express": "^4.16.4",
     "immutable": "^3.8.2",
     "normalizr": "^3.3.0",
     "prop-types": "^15.6.2",
