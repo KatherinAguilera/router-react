@@ -1,5 +1,6 @@
 import React, { PureComponent } from'react';
 import'./generic-page.css';
+import { withRouter } from 'react-router';
 
 class NotFound extends PureComponent{
   handleRandomClick = () => {
@@ -37,10 +38,10 @@ class NotFound extends PureComponent{
           onClick={this.handleRandomClick}
         >
         Ir video Random
-        </button>        
+        </button>
       </div>
     )
   }
 }
 
-export default NotFound
+export default withRouter(NotFound)

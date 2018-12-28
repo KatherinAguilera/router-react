@@ -11,6 +11,7 @@ import reducer from '../../reducers/index';
 import HomePage from './homepage';
 import Home from '../components/home';
 import NotFound from '../components/not-found';
+import Video from './video';
 
 const logger_ = ({getState, dispatch }) => next => action => {
   console.log('este es mi viejo estado', getState().toJS())
@@ -46,7 +47,9 @@ class App extends Component {
       <Switch>
         <Route exact path="/" component={ Home } />
         <Route exact path="/videos" component={ HomePage } />
+        <Route exact path="/videos/:id" component={ Video } />
         <Redirect from="/v" to="/videos" />
+        <Redirect from="/v/:id" to="/videos/:id" />
         <Route component={ NotFound } />
       </Switch>
       </Fragment>
